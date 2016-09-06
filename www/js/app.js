@@ -68,4 +68,13 @@
 		}
 	});
 
+	app.controller('ReviewsController', function(){
+		this.review ={};
+
+		this.addReview = function(Product){
+			Product.reviews.push(this.review);
+			this.review = {};
+		};
+	});
+
 })();
